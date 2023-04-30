@@ -1,0 +1,9 @@
+{
+  "feedbacks": [
+    {
+      "id": 1,
+      "text": "The is from json server",
+      "rating": 10
+    }
+  ]
+}

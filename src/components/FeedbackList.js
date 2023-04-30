@@ -2,11 +2,17 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FeedbackItem from "./FeedbackItem";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackList() {
+  const { fetchFeedbacks } = useContext(FeedbackContext);
+
+  useEffect(() => {
+    fetchFeedbacks();
+  }, []);
+
   const { feedback } = useContext(FeedbackContext);
   const renderedFeedbacks = (
     <div className="feedback-list">
